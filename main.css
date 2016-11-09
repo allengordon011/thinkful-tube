@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+form {
+	padding: 5px;
+}
+input {
+	width: 200px;
+	height: 25px;
+}

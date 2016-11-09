@@ -29,9 +29,11 @@ function displayData(data) {
 	var videos = data.items
 	videos.forEach(function(video) {
 		var imgUrl = video.snippet.thumbnails.default.url;
-		var imgHtml = "<img src=" + imgUrl + ">";
+		//link images to video
+		var imageLink = "https://www.youtube.com/watch?v=" + video.id.videoId;
+		var imgHtml = "<a href=" + imageLink + "> " + "<img src=" + imgUrl + ">";
 		$(".js-results").append(imgHtml);
+		console.log(imgHtml);
 	})
 }
-
 });
