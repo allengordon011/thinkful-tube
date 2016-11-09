@@ -16,10 +16,11 @@ $('form').on('submit', function(e) {
 
 function searchYouTube(userValue){
 	var query = {
-		part: 'snippet'
-		key: (your API key as a string)
-		q: (your search term as a string)
+		part: 'snippet',
+		key: 'AIzaSyAL6SU2FGzeWTOltP8Zg4KIauwmt9CgoV4',
+		q: userValue
 	}
+	$.getJSON()
 }
 
 
