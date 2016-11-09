@@ -19,6 +19,7 @@ function displayData(data) {
 		var imgHtml = "<img src=" + imgUrl + " id=" + video.id.videoId + ">";
 		$(".js-results").append(imgHtml);
 	})
+
 }
 
 
@@ -28,17 +29,18 @@ $(document).ready(function(){
 	$('form').on('submit', function(e) {
 		e.preventDefault();
 		var userValue = $('input').val();
+		$('.js-results').empty();
 		searchYouTube(userValue, displayData);
 	});
 
-	$('input:text').click(function(){ 
-		$(this).val(''); 
+	$('input:text').click(function(){
+		$(this).val('');
 	});
 
 	$("div").on("click", "img", function(e) {
 		var id = $(this).attr("id");
 		var embed = '<iframe width="560" height="315" ' +
-		'src="https://www.youtube.com/embed/' + id + 
+		'src="https://www.youtube.com/embed/' + id +
 		'" frameborder="0"' +
 		' allowfullscreen></iframe>'
 		$(".video").html(embed);
